@@ -3,6 +3,9 @@
 Experimental framework for OCR-free metadata extraction
 from Indonesian official documents.
 
+> [!IMPORTANT]
+> This repository contains files seems complete yet they just serve as initial files to keep the repository structure tracked by Git so most files still contain nothing.
+
 ## Research Objective
 
 This project investigates the effect of different
