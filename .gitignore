@@ -6,6 +6,54 @@ __pycache__/
 # C extensions
 *.so
 
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Virtual environment
+.venv/
+venv/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Model checkpoints
+checkpoints/
+outputs/
+runs/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# Dataset
+data/
+datasets/
+raw_documents/
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.tif
+*.tiff
+
+# Hugging Face cache
+.cache/
+.huggingface/
+hub/
+
+# System
+.DS_Store
+Thumbs.db
+
 # Distribution / packaging
 .Python
 build/

@@ -1,0 +1,32 @@
+experiment:
+  name: "docmeta-resnet50"
+  seed: 42
+
+model:
+  encoder_type: "resnet50"
+  encoder_checkpoint: "torchvision:ResNet50_Weights.IMAGENET1K_V2"
+  decoder_checkpoint: "naver-clova-ix/donut-base"
+
+  feature_layer: "layer4"
+  use_linear_adapter: true
+  use_positional_embedding: true
+  decoder_type: "bart"
+
+training:
+  batch_size: null
+  epochs: null
+  learning_rate: null
+  weight_decay: null
+  seed: 42
+
+generation:
+  num_beams: 4
+  max_length: 128
+
+evaluation:
+  metrics:
+    - document_number_exact_match
+    - document_subject_exact_match
+    - full_metadata_exact_match
+    - cer
+

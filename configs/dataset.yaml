@@ -1,0 +1,33 @@
+dataset:
+  id: "zeynthedev/docmeta-id"
+  version: "0.1.0"
+  status: "pilot"
+
+  schema_version: "1.0"
+
+  target_fields:
+    document_numbers:
+      type: "array[string]"
+      description: "One or more document numbers."
+
+    document_subject:
+      type: "string"
+      description: "Perihal, tentang, or document subject."
+
+  document_families:
+    - correspondence
+    - regulation
+    - decision
+
+  source_fields:
+    - PERIHAL
+    - HAL
+    - TENTANG
+    - JUDUL
+    - OTHER
+
+  image:
+    format: "PNG"
+    color_mode: "RGB"
+    preserve_aspect_ratio: true
+
