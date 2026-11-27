@@ -1,0 +1,30 @@
+experiment:
+  name: "docmeta-swin"
+  seed: 42
+
+model:
+  encoder_type: "swin"
+  encoder_checkpoint: "naver-clova-ix/donut-base"
+  decoder_checkpoint: "naver-clova-ix/donut-base"
+
+  use_linear_adapter: true
+  decoder_type: "bart"
+
+training:
+  batch_size: null       # Set after Colab memory test
+  epochs: null           # Set after pilot experiment
+  learning_rate: null
+  weight_decay: null
+  seed: 42
+
+generation:
+  num_beams: 4
+  max_length: 128
+
+evaluation:
+  metrics:
+    - document_number_exact_match
+    - document_subject_exact_match
+    - full_metadata_exact_match
+    - cer
+
